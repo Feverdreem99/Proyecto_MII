@@ -23,4 +23,9 @@ public class MoveToTarget : MonoBehaviour
             agent.SetDestination(target.position);
         }
     }
+
+    public void SetNewTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
 }
