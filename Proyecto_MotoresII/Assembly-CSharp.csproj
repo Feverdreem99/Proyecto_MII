@@ -59,8 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MoveToTarget.cs" />
+    <Compile Include="Assets\Scripts\Temporizador.cs" />
     <Compile Include="Assets\Scripts\CollideAndMove.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Stamina.cs" />
     <Compile Include="Assets\Scripts\AttractEnemies.cs" />
     <Compile Include="Assets\Scripts\Movimiento.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

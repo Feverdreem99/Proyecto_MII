@@ -362,6 +362,8 @@
 "Assets/Scripts/MoveToTarget.cs"
 "Assets/Scripts/Movimiento.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Stamina.cs"
+"Assets/Scripts/Temporizador.cs"
 -langversion:9.0
 
 /deterministic
