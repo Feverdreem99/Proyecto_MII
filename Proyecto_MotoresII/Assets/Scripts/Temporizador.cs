@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Temporizador : MonoBehaviour
 {
-    public Text TextoTemporizador;
+    public MoveToPlayer chaserEnemy;
+    public EnemySpawner spawnListener;
+    public TMP_Text TextoTemporizador;
     private float TiempoTranscurrido = 0f;
     public float intervaloFortalecimiento = 30f;  
     private float tiempoParaFortalecer = 0f;
@@ -33,8 +36,13 @@ public class Temporizador : MonoBehaviour
      
         if (tiempoParaFortalecer >= intervaloFortalecimiento)
         {
+            chaserEnemy.normalSpeed = chaserEnemy.normalSpeed + 2;
+            chaserEnemy.chaseSpeed = chaserEnemy.normalSpeed + 2;
+            spawnListener.SpawnAtRandom();
             Debug.Log("Enemigos fortalecidos"); 
             tiempoParaFortalecer = 0f;           
         }
     }
+
+    
 }

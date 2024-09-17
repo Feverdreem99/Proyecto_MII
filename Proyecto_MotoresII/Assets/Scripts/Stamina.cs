@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Stamina : MonoBehaviour
 {
     public CharacterController controller;
+
+    public TMP_Text TextoStamina;
 
     public float VelocidadCaminado = 6f;
     public float VelocidadCorriendo = 9f;
@@ -79,6 +82,7 @@ public class Stamina : MonoBehaviour
         }
 
         controller.Move(velocidad * Time.deltaTime);
+        TextoStamina.text = stamina.ToString();
     }
 }
 

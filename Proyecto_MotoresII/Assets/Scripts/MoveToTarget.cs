@@ -7,25 +7,34 @@ public class MoveToTarget : MonoBehaviour
 {
 
     public Transform target; // Assign the cube in the Inspector
-    private UnityEngine.AI.NavMeshAgent agent;
+    private NavMeshAgent agent;
+
+   
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(target.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (agent.destination != target.position)
+        // Check if there's a target and move towards it
+        if (target != null)
         {
             agent.SetDestination(target.position);
         }
+
     }
+
+
+
+
 
     public void SetNewTarget(Transform newTarget)
     {
         target = newTarget;
     }
+
+
 }
