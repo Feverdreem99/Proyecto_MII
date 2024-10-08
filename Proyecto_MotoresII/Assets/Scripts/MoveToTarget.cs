@@ -7,9 +7,14 @@ public class MoveToTarget : MonoBehaviour
 {
 
     public Transform target; // Assign the cube in the Inspector
+    public GameObject targetGameObject;
     private NavMeshAgent agent;
 
-   
+    private void Awake()
+    {
+        targetGameObject = GameObject.FindGameObjectWithTag("Objective");
+        target = targetGameObject.transform;
+    }
     // Start is called before the first frame update
     void Start()
     {
