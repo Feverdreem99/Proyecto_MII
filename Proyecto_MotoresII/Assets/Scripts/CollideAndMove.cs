@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollideAndMove : MonoBehaviour
 {
-    public MoveToTarget CylinderObjective;
+    public UnityEvent collideAndMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,8 @@ public class CollideAndMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Objective"))
         {
-            CylinderObjective.SetNewTarget(collision.transform);
-            Debug.Log("Tocando objetivo");
+            collideAndMove.Invoke();
+            Debug.Log("Tocando Objetivo");
         }
     }
 }

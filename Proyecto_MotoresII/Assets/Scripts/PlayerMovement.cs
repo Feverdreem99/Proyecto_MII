@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         // Calculate movement direction
         
 
-        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0 && rb.velocity != Vector3.zero)
         {
             movement = new Vector3(moveX, 0, moveZ) * VelocidadCorriendo;
 
