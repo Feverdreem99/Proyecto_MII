@@ -13,6 +13,8 @@ public class MoveToTargetEvent : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         obstacleCollisionDetector = player.GetComponent<CollideAndMove>();
+
+        
     }
     private void Start()
     {

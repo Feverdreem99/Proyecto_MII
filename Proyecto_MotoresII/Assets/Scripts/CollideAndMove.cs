@@ -26,4 +26,6 @@ public class CollideAndMove : MonoBehaviour
             Debug.Log("Tocando Objetivo");
         }
     }
+
+  
 }
