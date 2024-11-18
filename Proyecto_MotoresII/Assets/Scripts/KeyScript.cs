@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameManager gameManager;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            // Notify GameManager that a key was collected
+            gameManager.CollectKey();
+            // Destroy the key object
+            Destroy(gameObject);
+        }
     }
 }
